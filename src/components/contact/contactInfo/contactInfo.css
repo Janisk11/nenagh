@@ -1,0 +1,9 @@
+@import '../../../style/App.css';
+
+.contact-info {
+  width: 30%;
+  padding: 10px;
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+}

@@ -1,0 +1,110 @@
+@import '../../style/App.css';
+.Navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: var(--white-color);
+  width: 100%;
+  padding: 9px 0;
+  transition: 0.3s ease;
+  z-index: 100;
+}
+.desktop-navabar-logo {
+  width: 90px;
+  height: 90px;
+}
+.Navbar .mobile-menu {
+  display: none;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+.Navbar .desktop-menu {
+  display: block;
+}
+.Navbar .desktop-menu ul li {
+  cursor: pointer;
+  padding: 2rem 2.7rem;
+  margin: 0 1rem;
+}
+.Navbar .desktop-menu ul li:last-child {
+  margin-right: 0;
+  padding-right: 0;
+}
+.Navbar .desktop-menu ul li:hover {
+  color: var(--main-color);
+}
+.extraLargeNavbar {
+  padding: 29px 0;
+}
+.mobile-navbar {
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: -100%;
+  background-color: var(--black-color);
+  z-index: 1000;
+  width: 50%;
+  transition: 0.4s ease;
+  padding: 20px;
+  overflow-y: auto;
+}
+.mobile-navbar .mobile-navbar-close {
+  padding: 20px;
+  margin-right: 80%;
+  cursor: pointer;
+}
+.mobile-navbar .mobile-navbar-close img {
+  min-width: 30px;
+  height: auto;
+}
+.mobile-navbar .mobile-navbar-logo {
+  padding: 10px;
+  width: 90px;
+  height: 90px;
+  cursor: pointer;
+}
+.mobile-navbar .mobile-navbar-menu {
+  padding-top: 20%;
+}
+.mobile-navbar .mobile-navbar-menu ul li {
+  cursor: pointer;
+  color: var(--white-color);
+  font-size: 2.5rem;
+  padding: 5% 0;
+}
+.mobile-navbar .mobile-navbar-menu ul li:hover {
+  color: var(--main-color);
+}
+.mobile-open {
+  right: 0;
+}
+.backdrop {
+  width: 100%;
+  height: 100vh;
+  background-color: var(--black-color);
+  opacity: 0.8;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 500;
+  display: none;
+}
+.backdrop-open {
+  display: block;
+}
+@media screen and (max-width: 720px) {
+  .Navbar .mobile-menu {
+    display: block;
+  }
+  .Navbar .desktop-menu {
+    display: none;
+  }
+  .mobile-navbar {
+    width: 70%;
+  }
+}
+@media screen and (max-width: 520px) {
+  .mobile-navbar {
+    width: 100%;
+  }
+}

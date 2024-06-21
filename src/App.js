@@ -1,25 +1,48 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect, useCallback } from 'react';
+import './style/App.css';
 
-function App() {
+// Components
+import DesktopNav from './components/navbar/desktopNav';
+import MobileNav from './components/navbar/mobileNav';
+import Backdrop from './components/navbar/backdrop';
+import Hero from './components/hero/hero';
+import Portfolio from './components/portfolio/portfolio';
+// import Partners from './components/partners/partners';
+import About from './components/about/about';
+import Contact from './components/contact/contact';
+import Footer from './components/footer/footer';
+
+const App = () => {
+  const [userIsScrolled, setUserIsScrolled] = useState(false);
+  const [mobileNavbarOpen, setMobileNavbarOpen] = useState(false);
+
+  const userIsScrolledHandler = useCallback(() => {
+    setUserIsScrolled(window.pageYOffset > 80);
+  }, []);
+
+  useEffect(() => {
+    window.addEventListener('scroll', userIsScrolledHandler);
+    return () => {
+      window.removeEventListener('scroll', userIsScrolledHandler);
+    };
+  }, [userIsScrolledHandler]);
+
+  const closeMobileMenu = () => setMobileNavbarOpen(false);
+  const openMobileMenu = () => setMobileNavbarOpen(true);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <MobileNav isOpen={mobileNavbarOpen} closeMobileMenu={closeMobileMenu} />
+      <Backdrop closeMobileMenu={closeMobileMenu} isOpen={mobileNavbarOpen} />
+      <DesktopNav userIsScrolled={userIsScrolled} mobileMenuOpen={openMobileMenu} />
+      <Hero />
+      <About />
+      <Portfolio />
+      {/* <Partners /> */}
+      <Contact />
+      <Footer />
     </div>
   );
-}
+};
 
 export default App;

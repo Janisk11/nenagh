@@ -1,0 +1,27 @@
+@import '../../../style/App.css';
+.portfolio-box {
+  position: relative;
+  max-width: 370px;
+  margin: 15px auto;
+  cursor: pointer;
+}
+.portfolio-box img {
+  width: 100%;
+  height: auto;
+}
+/* .portfolio-box .portfolio-hover-info {
+  background-color: rgba(0, 1, 0);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: 0.3s ease;
+} */
+.portfolio-box .portfolio-hover-info p {
+  text-transform: uppercase;
+}
+/* .portfolio-box .portfolio-hover-info:hover {
+  opacity: 0.5;
+} */

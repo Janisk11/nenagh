@@ -1,0 +1,118 @@
+@import '../../style/App.css';
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 200;
+  text-align: center;
+  margin: 0 5%;
+}
+.modal .backdrop {
+  background-color: var(--black-color);
+  opacity: 0.8;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 300;
+  display: block;
+  cursor: pointer;
+}
+.modal div {
+  z-index: 400;
+}
+.modal div .sucess-modal {
+  margin: 5px;
+  background-color: var(--white-color);
+  z-index: 500;
+  padding: 30px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.modal div .sucess-modal p {
+  font-size: 1.5rem;
+  color: #1e1e1e;
+  font-weight: 800;
+}
+.modal div .sucess-modal p:nth-child(1) {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--main-color);
+}
+.modal div .sucess-modal p:nth-child(2) {
+  margin: 20px 0;
+}
+.modal div .sucess-modal .modal-btn {
+  background-color: var(--main-color);
+  padding: 10px 25px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.modal div .sucess-modal .modal-btn p {
+  color: #1e1e1e;
+  font-size: 1.4rem;
+}
+.modal div {
+  z-index: 400;
+}
+.modal div .error-modal {
+  margin: 5px;
+  background-color: var(--white-color);
+  z-index: 500;
+  padding: 30px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.modal div .error-modal p {
+  font-size: 1.5rem;
+  color: #1e1e1e;
+  font-weight: 800;
+}
+.modal div .error-modal p:nth-child(1) {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #f45c21;
+  margin-bottom: 10px;
+}
+.modal div .error-modal p:nth-child(2) {
+  margin: 10px 0 0 0;
+}
+.modal div .error-modal p:nth-child(3) {
+  margin: 20px 0;
+  font-size: 2rem;
+  color: #1e1e1e;
+  font-weight: 700;
+}
+.modal div .error-modal .modal-btn {
+  background-color: var(--main-color);
+  padding: 10px 25px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.modal div .error-modal .modal-btn p {
+  margin: 0px;
+  padding: 0px;
+  color: #1e1e1e;
+  font-size: 1.4rem;
+}
+@media only screen and (max-width: 360px) {
+  .modal div .error-modal {
+    padding: 20px;
+  }
+  .modal div .error-modal p:nth-child(3) {
+    font-size: 1.5rem;
+  }
+}

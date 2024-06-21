@@ -1,0 +1,89 @@
+@import '../../style/App.css';
+#portfolio {
+  /* padding: 30px 0; */
+}
+#portfolio .portfolio-nav ul {
+  display: flex;
+}
+#portfolio .portfolio-nav ul li {
+  padding: 5px 15px;
+  margin-right: 10px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+#portfolio .portfolio-nav ul li:hover {
+  background-color: var(--main-color);
+}
+#portfolio .portfolio-nav .portfolio-nav-active {
+  background-color: var(--main-color);
+}
+#portfolio .portfolio-filter {
+  display: flex;
+  justify-content: flex-end;
+  cursor: pointer;
+  margin-bottom: 50px;
+  background-attachment: fixed;
+  max-width: 200px;
+  float: right;
+  position: relative;
+  padding: 8px 10px;
+}
+#portfolio .portfolio-filter p {
+  padding-right: 10px;
+}
+#portfolio .portfolio-filter .portfolio-filter-menu {
+  background-color: var(--light-color);
+  position: absolute;
+  top: 40px;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  text-align: center;
+  border-radius: 5px;
+  z-index: 999;
+}
+#portfolio .portfolio-filter .portfolio-filter-menu p {
+  padding: 8px 0;
+  margin: 2px 0;
+  transition: 0.3s ease;
+}
+#portfolio .portfolio-filter .portfolio-filter-menu p:hover {
+  background-color: var(--main-color);
+}
+.my-masonry-grid {
+  display: -webkit-box;
+  /* Not needed if autoprefixing */
+  display: -ms-flexbox;
+  /* Not needed if autoprefixing */
+  display: flex;
+  /* margin-left: -30px; */
+  /* gutter size offset */
+  width: auto;
+}
+.kairali-gallery {
+  padding-left: 30px;
+  /* gutter size */
+  background-clip: padding-box;
+}
+/* Style your items */
+.kairali-gallery > div {
+  /* change div to reference your elements you put in <Masonry> */
+  margin-bottom: 30px;
+}
+@media screen and (max-width: 767px) {
+  #portfolio .portfolio-nav ul {
+    justify-content: center;
+  }
+  #portfolio .portfolio-filter {
+    justify-content: center;
+    max-width: 200px;
+    margin: 30px auto;
+    float: none;
+  }
+}
+@media screen and (max-width: 400px) {
+  #portfolio .portfolio-nav ul li {
+    padding: 5px 5px;
+    margin-right: 5px;
+  }
+}

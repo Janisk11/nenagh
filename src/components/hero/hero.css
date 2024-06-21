@@ -1,0 +1,39 @@
+@import '../../style/App.css';
+.hero-content {
+	padding-top: 240px;
+	width: 100%;
+	padding-bottom: 30px;
+}
+.hero-content .hero-info {
+	padding-top: 60px;
+}
+.hero-content .hero-info p {
+	padding-top: 20px;
+	padding-bottom: 50px;
+}
+.hero-content .hero-image {
+	max-width: 570px;
+	height: auto;
+	float: right;
+}
+.hero-content .hero-image img{
+	border-radius: 30%;
+}
+@media screen and (max-width: 1080px) {
+	.hero-content {
+		padding-top: 140px;
+	}
+	.hero-content .hero-info {
+		padding-top: 0px;
+	}
+	.hero-content .hero-image {
+		float: none;
+		margin: 0 auto;
+		margin-top: 50px;
+	}
+}
+@media screen and (max-width: 990px) {
+	.hero-content .hero-info {
+		text-align: center;
+	}
+}
