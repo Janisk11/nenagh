@@ -2,7 +2,7 @@
   "name": "nenagh",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://Janisk11.github.io/nenagh-kairali",
+  "homepage": "https://Janisk11.github.io/nenagh",
   "dependencies": {
     "@mui/material": "^5.15.20",
     "@testing-library/jest-dom": "^5.17.0",
