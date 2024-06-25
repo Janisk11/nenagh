@@ -11,6 +11,10 @@ import Modal from '../contactModal/modal'
 
 import ContactBackground from '../../assets/contact/bg.png'
 
+// EMAIL.JS API KEY
+const API_KEY = process.env.REACT_APP_CONTACT_API_KEY_TEST;
+// YOUR EMAIL.JS TEMPLATE ID
+const TEMPLATE_ID = process.env.REACT_APP_CONTACT_TEMPLATE_ID_TEST
 
 class Contact extends React.Component {
   constructor(props) {
@@ -39,12 +43,6 @@ class Contact extends React.Component {
       from_email: this.state.email,
       message: this.state.message,
     }
-
-    // YOUR EMAIL.JS API KEY IN FORMAT user_xxxxxxxxxxxxxxxxxx
-    let API_KEY = '1qWStFPCN33qk6JQf'
-
-    // YOUR EMAIL.JS TEMPLATE ID
-    let TEMPLATE_ID = 'template_qvsm7jq'
 
     emailjs.send('service_3m1t543', TEMPLATE_ID, template_params, API_KEY).then(
       function (response) {
