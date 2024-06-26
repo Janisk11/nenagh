@@ -11,12 +11,6 @@ import Modal from '../contactModal/modal'
 
 import ContactBackground from '../../assets/contact/bg.png'
 
-// EMAIL.JS API KEY
-const API_KEY = process.env.REACT_APP_CONTACT_API_KEY_TEST;
-// YOUR EMAIL.JS TEMPLATE ID
-const TEMPLATE_ID = process.env.REACT_APP_CONTACT_TEMPLATE_ID_TEST;
-const CONTACT_SERVICE = process.env.REACT_APP_CONTACT_SERVICE_TEST
-
 class Contact extends React.Component {
   constructor(props) {
     super(props)
@@ -28,6 +22,10 @@ class Contact extends React.Component {
       successModal: false,
       errorModal: false,
     }
+  }
+
+  componentDidMount() {
+    emailjs.init(process.env.REACT_APP_CONTACT_API_KEY_TEST)
   }
 
   inputHandler = (event) => {
@@ -45,6 +43,10 @@ class Contact extends React.Component {
       message: this.state.message,
     }
 
+    let API_KEY = process.env.REACT_APP_CONTACT_API_KEY_TEST
+    let TEMPLATE_ID = process.env.REACT_APP_CONTACT_TEMPLATE_ID_TEST
+    let CONTACT_SERVICE = process.env.REACT_APP_CONTACT_SERVICE_TEST
+
     emailjs.send(CONTACT_SERVICE, TEMPLATE_ID, template_params, API_KEY).then(
       function (response) {
         if (response.status === 200) {
@@ -54,6 +56,7 @@ class Contact extends React.Component {
         }
       },
       function (error) {
+        console.error('EmailJS Error:', error)
         self.showErrorModal()
       }
     )
@@ -64,15 +67,18 @@ class Contact extends React.Component {
     this.setState({ successModal: true, sending: false })
     this.resetForm()
   }
+
   // ERROR MODAL
   showErrorModal = () => {
     this.setState({ errorModal: true, sending: false })
     this.resetForm()
   }
+
   // RESET CONTACT FORM
   resetForm() {
     this.setState({ name: '', email: '', message: '' })
   }
+
   // CLOSE ALL MODALS
   closeModal = () => {
     this.setState({ successModal: false, errorModal: false })
