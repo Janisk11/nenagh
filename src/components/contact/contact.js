@@ -14,7 +14,8 @@ import ContactBackground from '../../assets/contact/bg.png'
 // EMAIL.JS API KEY
 const API_KEY = process.env.REACT_APP_CONTACT_API_KEY_TEST;
 // YOUR EMAIL.JS TEMPLATE ID
-const TEMPLATE_ID = process.env.REACT_APP_CONTACT_TEMPLATE_ID_TEST
+const TEMPLATE_ID = process.env.REACT_APP_CONTACT_TEMPLATE_ID_TEST;
+const CONTACT_SERVICE = process.env.REACT_APP_CONTACT_SERVICE_TEST
 
 class Contact extends React.Component {
   constructor(props) {
@@ -44,7 +45,7 @@ class Contact extends React.Component {
       message: this.state.message,
     }
 
-    emailjs.send('service_3m1t543', TEMPLATE_ID, template_params, API_KEY).then(
+    emailjs.send(CONTACT_SERVICE, TEMPLATE_ID, template_params, API_KEY).then(
       function (response) {
         if (response.status === 200) {
           self.showSuccessModal()
