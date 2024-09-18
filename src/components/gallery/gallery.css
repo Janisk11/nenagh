@@ -39,32 +39,34 @@
     padding: 0 12px;
 }
 .gallery-wrapper .masonry-grid {
-  display: -webkit-box;
-  /* Not needed if autoprefixing */
-  display: -ms-flexbox;
-  /* Not needed if autoprefixing */
-  display: flex;
-  /* margin-left: -30px; */
-  /* gutter size offset */
-  width: auto;
-  gap: 12px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: auto;
+    gap: 12px;
 }
 
 .gallery-wrapper .image-item {
-  position: relative;
-  max-width: 370px;
-  margin: 15px auto;
-  cursor: pointer;
+    position: relative;
+    max-width: 370px;
+    margin: 15px auto;
 }
 .gallery-wrapper .image-item img {
-  width: 100%;
-  height: auto;
+    width: 100%;
+    height: auto;
 }
 .gallery-wrapper .year-section{
     display: block;
 }
 .gallery-wrapper .year-section h2 {
-    font-size: 30px;
+    font-size: 25px;
     font-weight: 600;
-    padding: 20px 0 0;
+    margin: 15px 0 0 5px;
+    padding: 10px;
+    line-height: 30px;
+    border: 2px dotted var(--dark-grey);
+    color: var(--main-color);
+    display: inline-grid;
+    border-radius: 20%;
+    background-color: white;
 }

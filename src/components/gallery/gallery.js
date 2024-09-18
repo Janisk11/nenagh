@@ -134,7 +134,7 @@ const TabsComponent = () => {
 
   return (
     <div className="wrapper gallery-wrapper">
-      <Title title="EVENTS SHOWCASE." />
+      <Title title="EVENTS SHOWCASE" />
       <div className="tabs">
         {tabItems.map(({ id, title }) => (
           <TabItemComponent
