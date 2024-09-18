@@ -244,3 +244,6 @@ p {
 .active-link {
   color: var(--main-color);
 }
+.top-element{
+  margin-top: 140px;
+}

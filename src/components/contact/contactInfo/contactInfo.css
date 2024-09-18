@@ -1,9 +1,20 @@
 @import '../../../style/App.css';
 
-.contact-info {
-  width: 30%;
+#contact .contact-info {
+  width: 100%;
   padding: 10px;
-  @media (max-width: 768px) {
-    width: 100%;
+  display: flex;
+  margin: auto;
+  flex-wrap: wrap;
+}
+@media screen and (min-width: 468px) {
+  #contact .contact-info {
+    flex-wrap: nowrap;
+  }
+}
+@media screen and (min-width: 768px) {
+  #contact .contact-info {
+    width: 60%;
+    flex-wrap: nowrap;
   }
 }

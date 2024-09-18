@@ -7,7 +7,8 @@ import './about.css'
 import TeamBox from './teamBox'
 import TeamInfo from './teaminfo'
 import Title from '../uiComponents/title/title'
-import Person01 from '../../assets/about/person01.png'
+import Person01 from '../../assets/about/about.png'
+
 
 const AboutText = styled.h2`
   font-size: 20px;
@@ -27,7 +28,7 @@ const AboutTag = styled.h3`
 const About = () => (
   <Element name="about" id="about">
     <div className="wrapper">
-      <Title title="ABOUT US." />
+      <Title title="ABOUT US" />
       <AboutText>Discover the Heartbeat of Kerala in Nenagh</AboutText>
       <AboutTag>
         Join Us in Celebrating Culture, Community, and Tradition!

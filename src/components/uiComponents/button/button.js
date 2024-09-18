@@ -1,20 +1,28 @@
 import React from 'react'
-import { Link } from 'react-scroll'
+import { Link  as ScrollLink} from 'react-scroll'
+import { Link as RouterLink } from 'react-router-dom'
+
 // CSS
 import './button.css'
 
 const button = (props) => (
   <div className="button">
-    <Link
-      className="button-link"
-      to={props.target}
-      spy={true}
-      smooth={true}
-      offset={-70}
-      duration={500}
-    >
-      {props.label}
-    </Link>
+    {props.linkType !== 'route' ? (
+      <ScrollLink
+        className="button-link"
+        to={props.target}
+        spy={true}
+        smooth={true}
+        offset={-80}
+        duration={500}
+      >
+        {props.label}
+      </ScrollLink>
+    ) : (
+      <RouterLink className="button-link" to={props.target}>
+        {props.label}
+      </RouterLink>
+    )}
   </div>
 )
 

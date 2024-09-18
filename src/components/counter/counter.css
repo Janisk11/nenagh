@@ -1,0 +1,6 @@
+.counter {
+    display: inline-block;
+}
+.counter span {
+    color: var(--secondary-color)
+}

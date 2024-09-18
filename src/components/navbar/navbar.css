@@ -30,7 +30,13 @@
   margin-right: 0;
   padding-right: 0;
 }
-.Navbar .desktop-menu ul li:hover {
+.Navbar .desktop-menu ul li a {
+  color: var(--black-color);
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 20px;
+}
+.Navbar .desktop-menu ul li a:hover {
   color: var(--main-color);
 }
 .extraLargeNavbar {
@@ -72,7 +78,10 @@
   font-size: 2.5rem;
   padding: 5% 0;
 }
-.mobile-navbar .mobile-navbar-menu ul li:hover {
+.mobile-navbar .mobile-navbar-menu ul li a {
+  color: var(--white-color);
+}
+.mobile-navbar .mobile-navbar-menu ul li a:hover {
   color: var(--main-color);
 }
 .mobile-open {

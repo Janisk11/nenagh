@@ -1,8 +1,6 @@
 @import '../../style/App.css';
-#contact {
-	/* padding: 30px 0; */
-}
-.small-button button {
+
+#contact .small-button button {
 	background-color: var(--main-color);
 	border: 2px solid var(--main-color);
 	padding: 15px 40px;
@@ -11,12 +9,14 @@
 	font-weight: 800;
 	margin: 5px 0 30px 0;
 	outline: none;
+	color: white;
 }
-.small-button button:hover {
+#contact .small-button button:hover {
 	border: 2px solid var(--main-color);
 	background-color: transparent;
+	color:  var(--black-color);
 }
-input {
+#contact  input {
 	background-color: var(--light-color);
 	width: 100%;
 	max-width: 570px;
@@ -24,36 +24,36 @@ input {
 	border: 0px;
 	padding: 0 15px;
 	font-size: 12px;
-	border: 2px solid var(--light-color);
+	border: 2px solid var(--grey-color);
 	outline: none;
 	margin: 5px 0;
 }
-input:active, input:focus {
+#contact input:active, #contact input:focus {
 	border: 2px solid var(--main-color);
 }
-::placeholder {
+#contact ::placeholder {
 	color: var(--black-color);
 	font-size: 12px;
 }
-textarea {
+#contact textarea {
 	background-color: var(--light-color);
 	width: 100%;
 	max-width: 570px;
 	border: 0px;
 	padding: 15px;
 	font-size: 12px;
-	border: 2px solid var(--light-color);
+	border: 2px solid var(--grey-color);
 	outline: none;
 	margin: 5px 0;
 }
-textarea:active, textarea:focus {
+#contact textarea:active, textarea:focus {
 	border: 2px solid var(--main-color);
 }
-::placeholder {
+#contact ::placeholder {
 	color: var(--black-color);
 	font-size: 12px;
 }
-.sending-btn {
+#contact .sending-btn {
 	width: 170px;
 	background-color: var(--main-color);
 	border: 1px solid var(--white-color);
@@ -63,12 +63,12 @@ textarea:active, textarea:focus {
 	margin: 0px;
 	border-radius: 5px;
 }
-.sending-btn div {
+#contact .sending-btn div {
 	margin: 0 auto;
 	width: 30px;
 	height: 30px;
 }
-.sending-btn div .sbl-circ {
+#contact .sending-btn div .sbl-circ {
 	color: var(--black-color);
 	position: relative;
 	display: inline-block;
@@ -89,17 +89,36 @@ textarea:active, textarea:focus {
 	#contact {
 		text-align: center;
 	}
-	.sending-btn {
+	#contact .sending-btn {
 		margin: 30px auto;
 	}
 }
-.contact-form, .img-wrapper {
-	width: 50%;
-	@media screen and (max-width: 768px) {
-		width: 100%;
+#contact #contact-form {
+	width: 100%;
+	background-color: var(--dark-grey);
+	z-index: 1;
+	padding: 0 30px;
+	text-align: center;
+}
+
+#contact .img-wrapper {
+	display: none;
+}
+
+@media screen and (min-width: 1024px) {
+	#contact #contact-form, #contact .img-wrapper {
+		width: 50%;
+	}
+	#contact .img-wrapper {
+		display:block;
+		padding: 50px 0;
+	}
+	#contact #contact-form{
+		text-align: left;
 	}
 }
-.form-wrapper {
+#contact .form-wrapper {
 	display: flex;
-	flex-wrap: wrap;
+	padding: 30px;
+	width: 100%;
 }

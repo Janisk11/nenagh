@@ -82,24 +82,24 @@ class Portfolio extends React.Component {
       filterResult: null,
       pickedFilter: 'all',
       filterMenuActive: false,
-      pickedFilterDropdown: 'NEWEST',
+      // pickedFilterDropdown: 'NEWEST',
     }
   }
 
   componentDidMount() {
-    this.filterGallery('all')
+    this.filterGallery('onam')
   }
 
   filterGallery = (target) => {
     const projectsArr = [...this.state.projects]
     const result =
-      target !== 'all'
+      target !== 'onam'
         ? projectsArr.filter((project) => project.tag === target)
         : projectsArr
     this.setState({
       filterResult: result,
       pickedFilter: target,
-      pickedFilterDropdown: 'NEWEST',
+      // pickedFilterDropdown: 'NEWEST',
     })
   }
 
@@ -164,7 +164,7 @@ class Portfolio extends React.Component {
             <Col size={8}>
               <div className="portfolio-nav">
                 <ul>
-                  <li
+                  {/* <li
                     className={
                       this.state.pickedFilter === 'all'
                         ? 'portfolio-nav-active font12'
@@ -173,7 +173,7 @@ class Portfolio extends React.Component {
                     onClick={() => this.filterGallery('all')}
                   >
                     ALL
-                  </li>
+                  </li> */}
                   <li
                     className={
                       this.state.pickedFilter === 'onam'
@@ -209,7 +209,7 @@ class Portfolio extends React.Component {
                 </ul>
               </div>
             </Col>
-            <Col size={4}>
+            {/* <Col size={4}>
               <div
                 className="portfolio-filter"
                 onMouseEnter={() => this.filterMenuHover(true)}
@@ -221,7 +221,7 @@ class Portfolio extends React.Component {
                 <img src={Arrow} alt="arrow" />
                 {filterDropDown}
               </div>
-            </Col>
+            </Col> */}
           </Row>
           <Masonry
             breakpointCols={portfolioBreakpoints}
@@ -230,9 +230,9 @@ class Portfolio extends React.Component {
           >
             {projectsRender}
           </Masonry>
-          <Row className="flex-center padding40">
-            <Button label="JOIN US?" target={'contact'} />
-          </Row>
+          {/* <Row className="flex-center padding40">
+            <Button label="VIEW MORE" target={'/events'} linkType={'route'} />
+          </Row> */}
         </div>
       </Element>
     )

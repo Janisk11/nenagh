@@ -2,14 +2,14 @@
 .footer {
 	background-color: var(--main-color);
 	width: 100%;
-	min-height: 180px;
+	min-height: 140px;
 }
 .footer-logo {
 width: 90px;
 height: 90px;
 }
 .footer .footer-box {
-	min-height: 180px;
+	min-height: 100px;
 	display: flex;
 	align-items: center;
 }

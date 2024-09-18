@@ -1,5 +1,6 @@
 import React from 'react'
-import { Link } from 'react-scroll'
+import { Link as ScrollLink } from 'react-scroll'
+import { Link as RouterLink } from 'react-router-dom'
 // css
 import './navbar.css'
 // Assets
@@ -13,9 +14,21 @@ const desktopNav = (props) => {
     >
       <div className="wrapper flex-s-between">
         <div className="desktop-navabar-logo">
-          <Link to="hero" spy={true} smooth={true} offset={0} duration={500}>
-            <img src={LogoImg} alt="logo" className="pointer" />
-          </Link>
+          {props.currentPath === '/' ? (
+            <ScrollLink
+              to="hero"
+              spy={true}
+              smooth={true}
+              offset={0}
+              duration={500}
+            >
+              <img src={LogoImg} alt="logo" className="pointer" />
+            </ScrollLink>
+          ) : (
+            <RouterLink to="/">
+              <img src={LogoImg} alt="logo" className="pointer" />
+            </RouterLink>
+          )}
         </div>
         <div className="mobile-menu" onClick={props.mobileMenuOpen}>
           <img src={MobileMenuIcon} alt="menu" />
@@ -23,52 +36,13 @@ const desktopNav = (props) => {
         <div className="desktop-menu">
           <ul className="flex-s-between">
             <li>
-              <Link
-                activeClass="active-link"
-                to="about"
-                spy={true}
-                smooth={true}
-                offset={-70}
-                duration={500}
-              >
-                ABOUT
-              </Link>
+              <RouterLink to="/">HOME</RouterLink>
             </li>
             <li>
-              <Link
-                activeClass="active-link"
-                to="portfolio"
-                spy={true}
-                smooth={true}
-                offset={-70}
-                duration={500}
-              >
-                EVENTS
-              </Link>
+              <RouterLink to="/events">EVENTS</RouterLink>
             </li>
-            {/* <li>
-              <Link
-                activeClass="active-link"
-                to="blog"
-                spy={true}
-                smooth={true}
-                offset={-70}
-                duration={500}
-              >
-                BLOG
-              </Link>
-            </li> */}
             <li>
-              <Link
-                activeClass="active-link"
-                to="contact"
-                spy={true}
-                smooth={true}
-                offset={-70}
-                duration={500}
-              >
-                CONTACT
-              </Link>
+              <RouterLink to="/contactus">CONTACT</RouterLink>
             </li>
           </ul>
         </div>

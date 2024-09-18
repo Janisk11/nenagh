@@ -1,5 +1,6 @@
 import React from 'react'
-import { Link } from 'react-scroll'
+import { Link as ScrollLink } from 'react-scroll'
+import { Link as RouterLink } from 'react-router-dom'
 
 // css
 import './navbar.css'
@@ -14,71 +15,39 @@ const mobileNav = (props) => {
         <img src={CloseIcons} alt="close" />
       </div>
       <div className="mobile-navbar-logo flex-center">
-        <Link
-          to="hero"
-          spy={true}
-          smooth={true}
-          offset={0}
-          duration={500}
-          onClick={props.closeMobileMenu}
-        >
-          <img src={Logo} alt="logo" />
-        </Link>
+        {props.currentPath === '/' ? (
+          <ScrollLink
+            to="hero"
+            spy={true}
+            smooth={true}
+            offset={0}
+            duration={500}
+            onClick={props.closeMobileMenu}
+          >
+            <img src={Logo} alt="logo" />
+          </ScrollLink>
+        ) : (
+          <RouterLink to="/">
+            <img src={Logo} alt="logo" />
+          </RouterLink>
+        )}
       </div>
       <div className="mobile-navbar-menu">
         <ul>
-          <li className="flex-center">
-            <Link
-              activeClass="active-link"
-              to="about"
-              spy={true}
-              smooth={true}
-              offset={-70}
-              duration={500}
-              onClick={props.closeMobileMenu}
-            >
-              ABOUT
-            </Link>
+          <li>
+            <RouterLink to="/" onClick={props.closeMobileMenu}>
+              HOME
+            </RouterLink>
           </li>
-          <li className="flex-center">
-            <Link
-              activeClass="active-link"
-              to="portfolio"
-              spy={true}
-              smooth={true}
-              offset={-70}
-              duration={500}
-              onClick={props.closeMobileMenu}
-            >
+          <li>
+            <RouterLink to="/events" onClick={props.closeMobileMenu}>
               EVENTS
-            </Link>
+            </RouterLink>
           </li>
-
-          {/* <li className="flex-center">
-            <Link
-              activeClass="active-link"
-              to="blog"
-              spy={true}
-              smooth={true}
-              offset={-70}
-              duration={500}
-              onClick={props.closeMobileMenu}
-            >
-              BLOG
-            </Link>
-          </li> */}
-          <li className="flex-center">
-            <Link
-              activeClass="active-link"
-              to="contact"
-              spy={true}
-              smooth={true}
-              offset={-70}
-              duration={500}
-              onClick={props.closeMobileMenu}
-            >
+          <li>
+            <RouterLink to="/contactus" onClick={props.closeMobileMenu}>
               CONTACT
-            </Link>
+            </RouterLink>
           </li>
         </ul>
       </div>

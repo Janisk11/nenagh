@@ -1,12 +1,22 @@
 @import '../../../style/App.css';
+
+.big-title h1 {
+  font-size: 40px;
+  padding: 20px;
+}
 @media screen and (max-width: 990px) {
   .big-title {
     width: 100%;
     text-align: center;
   }
 }
-@media screen and (max-width: 400px) {
-  .big-title h2 {
-    font-size: 4rem;
+@media screen and (min-width: 700px) {
+  .big-title h1 {
+    padding: 40px 40px 20px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .big-title h1 {
+    padding: 50px 50px 25px;
   }
 }

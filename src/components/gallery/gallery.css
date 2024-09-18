@@ -1,0 +1,58 @@
+.tabs {
+    display: flex;
+    flex-wrap: wrap;
+}
+@media screen and (max-width: 767px){
+    .tabs {
+        justify-content: center;
+        margin-top: 10px;
+    }
+}
+
+.tabitem {
+    border: 3px solid var(--main-color);
+    cursor: pointer;
+    height: 50px;
+    text-align: center;
+    padding: 12px 16px;
+    background-color: var(--main-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.tabitem.tabitem-inactive {
+    opacity: 0.3;
+    filter: grayscale(100%);
+    border: 1px solid var(--black-color);
+}
+
+.tabitem-title {
+    color: var(--white-color);
+    font-size: 16px;
+}
+
+.masonry-grid {
+  display: -webkit-box;
+  /* Not needed if autoprefixing */
+  display: -ms-flexbox;
+  /* Not needed if autoprefixing */
+  display: flex;
+  /* margin-left: -30px; */
+  /* gutter size offset */
+  width: auto;
+  gap: 15px;
+}
+
+.image-item {
+  position: relative;
+  max-width: 370px;
+  margin: 15px auto;
+  cursor: pointer;
+}
+.image-item img {
+  width: 100%;
+  height: auto;
+}
+.year-section{
+    display: block;
+}

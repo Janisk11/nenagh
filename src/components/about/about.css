@@ -9,7 +9,7 @@
     text-align: center;
   }
 }
-.inner-wrapper {
+#about .inner-wrapper {
   display: flex;
   flex-wrap: wrap;
   /* justify-content: space-between; */
@@ -17,7 +17,7 @@
     flex-direction: column;
   }
 }
-.img-wrapper {
+#about .img-wrapper {
   max-width: 30%;
   margin: 0 20px 20px 20px;
   @media (max-width: 768px) {
@@ -25,7 +25,7 @@
     margin: 0 0 10px 0;
   }
 }
-.cont-wrapper {
+#about .cont-wrapper {
   max-width: 60%;
   margin-bottom: 0px;
   @media (max-width: 768px) {

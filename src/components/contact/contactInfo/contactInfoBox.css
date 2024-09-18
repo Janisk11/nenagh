@@ -1,15 +1,35 @@
 @import '../../../style/App.css';
-.contact-info-box {
+#contact .contact-info-box {
 	width: 100%;
 	display: flex;
+	flex-wrap: wrap;
 	flex-direction: column;
-	justify-content: space-between;
 	align-items: center;
+	transition: 0.1s ease;
+	cursor: pointer;
+	flex: 1;
 }
-.contact-info-box img {
-	margin: 20px 0;
+#contact .contact-info-box img {
+	margin: 20px 0 5px;
 }
-.contact-info-box p {
-	font-size: 1.2rem;
-	line-height: 2rem;
+#contact .contact-info-box p {
+	font-size: 12px;
+	line-height: 15px;
+}
+#contact .contact-info-box .facebook:hover {
+	filter: invert(31%) sepia(81%) saturate(3187%) hue-rotate(181deg)
+	brightness(93%) contrast(102%);
+}
+#contact .contact-info-box .youtube:hover {
+	filter: invert(26%) sepia(94%) saturate(7483%) hue-rotate(355deg)
+  brightness(95%) contrast(96%);
+}
+#contact .contact-info-box .email:hover {
+	filter: invert(35%) sepia(77%) saturate(4534%) hue-rotate(348deg)
+  brightness(96%) contrast(91%);
+}
+@media screen and (min-width: 468px) {
+	#contact .contact-info-box{
+		flex-wrap: nowrap;
+	}
 }

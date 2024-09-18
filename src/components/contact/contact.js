@@ -6,10 +6,9 @@ import './contact.css'
 import * as emailjs from 'emailjs-com'
 import Title from '../uiComponents/title/title'
 import ContactInfo from './contactInfo/contactInfo'
-import ContactSocial from './contactInfo/contactSocial'
 import Modal from '../contactModal/modal'
 
-import ContactBackground from '../../assets/contact/bg.png'
+import ContactBackground from '../../assets/contact/contactbg.png'
 
 class Contact extends React.Component {
   constructor(props) {
@@ -111,10 +110,10 @@ class Contact extends React.Component {
       <Element name="contact" id="contact">
         {modalRender}
         <div className="wrapper">
-          <Title title="CONTACT US." />
-          <p className="font12">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt<br></br>ut labore et dolore magna aliqua.
+          <Title title="CONTACT US" />
+          <p>
+            For more information about our association, upcoming events, or to
+            become a member, please contact us
           </p>
           <div className="form-wrapper">
             <form id="contact-form" onSubmit={this.handleSubmit}>
@@ -153,7 +152,6 @@ class Contact extends React.Component {
             </div>
           </div>
           <ContactInfo />
-          <ContactSocial />
         </div>
       </Element>
     )

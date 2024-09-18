@@ -1,15 +1,13 @@
 @import '../../style/App.css';
 .hero-content {
-	padding-top: 240px;
 	width: 100%;
-	padding-bottom: 30px;
+	padding: 30px 0;
 }
 .hero-content .hero-info {
 	padding-top: 60px;
 }
 .hero-content .hero-info p {
-	padding-top: 20px;
-	padding-bottom: 50px;
+	padding: 20px 0;
 }
 .hero-content .hero-image {
 	max-width: 570px;
@@ -19,10 +17,16 @@
 .hero-content .hero-image img{
 	border-radius: 30%;
 }
+.hero-content .counter-box {
+	margin: 0 0 40px;
+}
+.hero-content .counter-box .suffix-text {
+	padding-left: 10px;
+}
+.hero-content .counter-box .prefix-text {
+	padding-right: 10px;
+}
 @media screen and (max-width: 1080px) {
-	.hero-content {
-		padding-top: 140px;
-	}
 	.hero-content .hero-info {
 		padding-top: 0px;
 	}

@@ -7,6 +7,7 @@ import './hero.css'
 import HeroImage from '../../assets/hero/hero1.jpg'
 // Components
 import Button from '../uiComponents/button/button'
+import Counter from '../counter/counter'
 
 const Hero = () => (
   <Element name="hero" id="hero">
@@ -17,7 +18,12 @@ const Hero = () => (
             <div className="hero-info">
               <h1 className="weight800 font60">Welcome to Nenagh Kairali</h1>
               <p className="font20">Embracing Kerala, Enriching Nenagh</p>
-              <Button label="SEND MESSAGE" target={'contact'} />
+              <div className="counter-box">
+                <span className="prefix-text font23">A community of</span>
+                <Counter end={100} suffix="+" />
+                <span className="suffix-text font23">families</span>
+              </div>
+              <Button label="SEND MESSAGE" target={'contact'} linkType={''} />
             </div>
           </Column>
           <Column>
