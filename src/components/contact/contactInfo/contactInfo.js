@@ -16,7 +16,7 @@ const ContactInfo = () => (
     />
     <ContactInfoBox
       icon={YoutubeIcon}
-      link="www.youtube.com/@nenaghkairali2568"
+      link="https://www.youtube.com/@nenaghkairali2568"
       iconName="youtube"
       textLine="YouTube"
     />

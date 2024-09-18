@@ -1,15 +1,20 @@
-.tabs {
+.gallery-wrapper {
+    margin-bottom:30px;
+}
+.gallery-wrapper .tabs {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 10px;
 }
-@media screen and (max-width: 767px){
-    .tabs {
-        justify-content: center;
-        margin-top: 10px;
+@media screen and (min-width: 768px){
+    .gallery-wrapper .tabs {
+        flex-wrap: nowrap;
+        margin-top: 0px;
     }
 }
 
-.tabitem {
+.gallery-wrapper .tabitem {
     border: 3px solid var(--main-color);
     cursor: pointer;
     height: 50px;
@@ -20,18 +25,20 @@
     flex-direction: column;
     justify-content: center;
 }
-.tabitem.tabitem-inactive {
+.gallery-wrapper .tabitem.tabitem-inactive {
     opacity: 0.3;
     filter: grayscale(100%);
     border: 1px solid var(--black-color);
 }
 
-.tabitem-title {
+.gallery-wrapper .tabitem-title {
     color: var(--white-color);
     font-size: 16px;
 }
-
-.masonry-grid {
+.gallery-wrapper .tab-content {
+    padding: 0 12px;
+}
+.gallery-wrapper .masonry-grid {
   display: -webkit-box;
   /* Not needed if autoprefixing */
   display: -ms-flexbox;
@@ -40,19 +47,24 @@
   /* margin-left: -30px; */
   /* gutter size offset */
   width: auto;
-  gap: 15px;
+  gap: 12px;
 }
 
-.image-item {
+.gallery-wrapper .image-item {
   position: relative;
   max-width: 370px;
   margin: 15px auto;
   cursor: pointer;
 }
-.image-item img {
+.gallery-wrapper .image-item img {
   width: 100%;
   height: auto;
 }
-.year-section{
+.gallery-wrapper .year-section{
     display: block;
+}
+.gallery-wrapper .year-section h2 {
+    font-size: 30px;
+    font-weight: 600;
+    padding: 20px 0 0;
 }
