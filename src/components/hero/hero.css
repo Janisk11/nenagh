@@ -6,6 +6,10 @@
 .hero-content .hero-info {
 	padding-top: 60px;
 }
+.hero-content .hero-info h1 {
+	font-size: 40px;
+	line-height: 50px;
+}
 .hero-content .hero-info p {
 	padding: 20px 0;
 }
@@ -36,8 +40,12 @@
 		margin-top: 50px;
 	}
 }
-@media screen and (max-width: 990px) {
+@media screen and (max-width: 767px) {
 	.hero-content .hero-info {
 		text-align: center;
+	}
+	.hero-content .hero-info h1 {
+		font-size: 30px;
+		line-height: 40px;
 	}
 }

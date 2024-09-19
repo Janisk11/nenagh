@@ -26,7 +26,7 @@ const eventsData = [
     preview: christmas,
   },
   {
-    tag: 'eastervishu',
+    tag: 'easter-vishu',
     preview: easter,
   },
   {

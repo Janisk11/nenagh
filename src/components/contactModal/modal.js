@@ -23,7 +23,7 @@ const modal = (props) => {
   }
 
   return (
-    <div className="modal">
+    <div className="contact-modal">
       <ModalBackdrop closeModal={props.closeModal} />
       {innerModalRender}
     </div>

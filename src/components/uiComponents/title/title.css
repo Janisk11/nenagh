@@ -1,17 +1,16 @@
 @import '../../../style/App.css';
 
 .big-title h1 {
-  font-size: 40px;
+  font-size: 30px;
   padding: 20px;
+  width: 100%;
+  text-align: center;
 }
-@media screen and (max-width: 990px) {
-  .big-title {
-    width: 100%;
-    text-align: center;
-  }
-}
+
 @media screen and (min-width: 700px) {
   .big-title h1 {
+    width: auto;
+    text-align: left;
     padding: 40px 40px 20px;
   }
 }

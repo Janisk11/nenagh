@@ -39,6 +39,12 @@ body {
   text-rendering: optimizeSpeed;
   line-height: 1.5;
 }
+.prevent-scroll {
+  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  width: 100%;
+}
 
 /* Remove list styles on ul, ol elements with a class attribute */
 ul[class],
