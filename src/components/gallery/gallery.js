@@ -128,19 +128,16 @@ const groupAndSortByYear = (data) => {
 const TabsComponent = () => {
   const [active, setActive] = useState(1)
   const [isModalOpen, setIsModalOpen] = useState(false)
-  const [currentImageIndex, setCurrentImageIndex] = useState(0)
   const [modalImages, setModalImages] = useState([])
 
   const activeTabData = useMemo(() => {
-    const activeTab = tabItems.find((tab) => tab.id === active)
+    const activeTab = tabItems.find(tab => tab.id === active)
     return activeTab ? groupAndSortByYear(activeTab.data) : []
   }, [active])
 
-  const openImageModal = (images, index, tabTitle, year) => {
+  const openImageModal = (images, tabTitle, year) => {
     setModalImages(images)
-    setCurrentImageIndex(index)
-    setModalTabTitle(tabTitle) // Save active tab title
-    setModalYear(year) // Save image year
+    setModalTitle(`${tabTitle} ~ ${year}`) // Combine title and year into one
     setIsModalOpen(true)
   }
 
@@ -148,17 +145,7 @@ const TabsComponent = () => {
     setIsModalOpen(false)
   }
 
-  const nextImage = () => {
-    setCurrentImageIndex((prevIndex) => (prevIndex + 1) % modalImages.length)
-  }
-
-  const prevImage = () => {
-    setCurrentImageIndex(
-      (prevIndex) => (prevIndex - 1 + modalImages.length) % modalImages.length
-    )
-  }
-  const [modalTabTitle, setModalTabTitle] = useState('') // State to hold active tab title
-  const [modalYear, setModalYear] = useState('') // State to hold image year
+  const [modalTitle, setModalTitle] = useState('') // State to hold combined title
 
   return (
     <div className="wrapper gallery-wrapper">
@@ -187,7 +174,11 @@ const TabsComponent = () => {
                     src={image.preview}
                     alt={image.title}
                     onClick={() =>
-                      openImageModal(images, index, tabItems.find((tab) => tab.id === active).title, year)
+                      openImageModal(
+                        images,
+                        tabItems.find(tab => tab.id === active).title,
+                        year
+                      )
                     } // open modal on image click
                   />
                 </div>
@@ -196,16 +187,14 @@ const TabsComponent = () => {
           </div>
         ))}
       </div>
-      <ImageModal
-        isOpen={isModalOpen}
-        images={modalImages}
-        currentImageIndex={currentImageIndex}
-        closeModal={closeModal}
-        nextImage={nextImage}
-        prevImage={prevImage}
-        tabTitle={modalTabTitle} // Pass tab title
-        year={modalYear}
-      />
+      {isModalOpen && (
+        <ImageModal
+          isOpen={isModalOpen}
+          images={modalImages}
+          closeModal={closeModal}
+          title={modalTitle} // Pass combined title
+        />
+      )}
     </div>
   )
 }
