@@ -16,7 +16,7 @@ const Hero = () => (
         <Row>
           <Column>
             <div className="hero-info">
-              <h1 className="weight800 font60">Welcome to Nenagh Kairali</h1>
+              <h1 className="weight800">Welcome to Nenagh Kairali</h1>
               <p className="font20">Embracing Kerala, Enriching Nenagh</p>
               <div className="counter-box">
                 <span className="prefix-text font23">A community of</span>

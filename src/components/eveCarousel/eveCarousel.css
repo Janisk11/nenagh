@@ -47,9 +47,9 @@
   max-width: 500px;
   height: auto;
   padding: 10px;
-  font-size: 3.5rem;
+  font-size: 20px;
   font-weight: 800;
-  line-height: 40px;
+  line-height: 30px;
   margin: auto;
   left: 0;
   right: 0;
@@ -60,8 +60,9 @@
 .swiper-button-prev, .swiper-button-next{
   display: none;
 }
-@media screen and (min-width: 900px){
+@media screen and (min-width: 768px){
   .swiper-slide .overlay{
     font-size: 40px;
+    line-height: 50px;
   }
 }

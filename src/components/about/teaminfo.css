@@ -5,22 +5,20 @@
 	border: 4px solid var(--light-color);
 	padding: 50px;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
 	.team-info {
 		margin: 20px auto 0;
 		padding: 0px;
 	}
 }
-.team-info h4 {
-	padding-bottom: 20px;
-}
+
 .team-info p {
 	padding-bottom: 20px;
 }
-.team-info p:last-child {
+/* .team-info p:last-child {
 	cursor: pointer;
 	transition: 0.3s ease;
 }
 .team-info p:last-child:hover {
 	color: var(--main-color);
-}
+} */

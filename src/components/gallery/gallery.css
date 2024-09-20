@@ -54,6 +54,7 @@
 .gallery-wrapper .image-item img {
     width: 100%;
     height: auto;
+    cursor: pointer;
 }
 .gallery-wrapper .year-section{
     display: block;

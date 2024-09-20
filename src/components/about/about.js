@@ -7,7 +7,7 @@ import './about.css'
 import TeamBox from './teamBox'
 import TeamInfo from './teaminfo'
 import Title from '../uiComponents/title/title'
-import Person01 from '../../assets/about/about.png'
+import AboutImg from '../../assets/about/about.png'
 
 
 const AboutText = styled.h2`
@@ -35,14 +35,10 @@ const About = () => (
       </AboutTag>
       <div className="inner-wrapper">
         <div className="img-wrapper">
-            <TeamBox
-              avatar={Person01}
-              name="Luke Skywalker"
-              job="Web designer"
-            />
+          <TeamBox avatar={AboutImg} />
         </div>
         <div className="cont-wrapper">
-            <TeamInfo />
+          <TeamInfo />
         </div>
       </div>
     </div>

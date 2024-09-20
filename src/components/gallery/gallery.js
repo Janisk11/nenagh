@@ -38,6 +38,7 @@ import sports12 from '../../assets/gallery/sports/sp12.png'
 
 // Components
 import Title from '../uiComponents/title/title'
+import ImageModal from './imageModal/imageModal'
 
 const tabItems = [
   {
@@ -126,11 +127,25 @@ const groupAndSortByYear = (data) => {
 
 const TabsComponent = () => {
   const [active, setActive] = useState(1)
+  const [isModalOpen, setIsModalOpen] = useState(false)
+  const [modalImages, setModalImages] = useState([])
 
   const activeTabData = useMemo(() => {
-    const activeTab = tabItems.find((tab) => tab.id === active)
+    const activeTab = tabItems.find(tab => tab.id === active)
     return activeTab ? groupAndSortByYear(activeTab.data) : []
   }, [active])
+
+  const openImageModal = (images, tabTitle, year) => {
+    setModalImages(images)
+    setModalTitle(`${tabTitle} ~ ${year}`) // Combine title and year into one
+    setIsModalOpen(true)
+  }
+
+  const closeModal = () => {
+    setIsModalOpen(false)
+  }
+
+  const [modalTitle, setModalTitle] = useState('') // State to hold combined title
 
   return (
     <div className="wrapper gallery-wrapper">
@@ -155,13 +170,31 @@ const TabsComponent = () => {
             >
               {images.map((image, index) => (
                 <div className="image-item" key={`${index}-${year}`}>
-                  <img src={image.preview} alt={image.title} />
+                  <img
+                    src={image.preview}
+                    alt={image.title}
+                    onClick={() =>
+                      openImageModal(
+                        images,
+                        tabItems.find(tab => tab.id === active).title,
+                        year
+                      )
+                    } // open modal on image click
+                  />
                 </div>
               ))}
             </Masonry>
           </div>
         ))}
       </div>
+      {isModalOpen && (
+        <ImageModal
+          isOpen={isModalOpen}
+          images={modalImages}
+          closeModal={closeModal}
+          title={modalTitle} // Pass combined title
+        />
+      )}
     </div>
   )
 }
