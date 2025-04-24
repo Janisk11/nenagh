@@ -10,6 +10,18 @@ import onam5 from '../../assets/gallery/onam/onam5.png'
 import onam6 from '../../assets/gallery/onam/onam6.png'
 import onam7 from '../../assets/gallery/onam/onam7.png'
 
+import chri1 from '../../assets/gallery/christmas/2019chri1.jpg'
+import chri2 from '../../assets/gallery/christmas/2019chri2.jpg'
+import chri3 from '../../assets/gallery/christmas/2019chri3.jpg'
+import chri4 from '../../assets/gallery/christmas/2019chri4.jpg'
+import chri5 from '../../assets/gallery/christmas/2019chri5.jpg'
+import chri6 from '../../assets/gallery/christmas/2019chri6.jpg'
+import chri7 from '../../assets/gallery/christmas/2019chri7.jpg'
+import chri8 from '../../assets/gallery/christmas/2019chri8.jpg'
+import chri9 from '../../assets/gallery/christmas/2019chri9.jpg'
+import chri10 from '../../assets/gallery/christmas/2019chri10.png'
+import chri11 from '../../assets/gallery/christmas/2019chri11.png'
+
 import east1 from '../../assets/gallery/eastervishu/easter1.png'
 import east2 from '../../assets/gallery/eastervishu/easter2.png'
 import east3 from '../../assets/gallery/eastervishu/easter3.png'
@@ -58,8 +70,17 @@ const tabItems = [
     id: 2,
     title: 'CHRISTMAS',
     data: [
-      // { preview: christ1, title: 'Christmas', year: '2023' },
-      // { preview: christ2, title: 'Christmas', year: '2023' },
+      { preview: chri1, title: 'Christmas', year: '2019' },
+      { preview: chri2, title: 'Christmas', year: '2019' },
+      { preview: chri4, title: 'Christmas', year: '2019' },
+      { preview: chri3, title: 'Christmas', year: '2019' },
+      { preview: chri6, title: 'Christmas', year: '2019' },
+      { preview: chri5, title: 'Christmas', year: '2019' },
+      { preview: chri9, title: 'Christmas', year: '2019' },
+      { preview: chri7, title: 'Christmas', year: '2019' },
+      { preview: chri10, title: 'Christmas', year: '2019' },
+      { preview: chri8, title: 'Christmas', year: '2019' },
+      { preview: chri11, title: 'Christmas', year: '2019' },
     ],
   },
   {
